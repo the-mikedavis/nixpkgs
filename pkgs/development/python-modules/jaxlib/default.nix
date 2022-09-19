@@ -235,11 +235,12 @@ let
     fetchAttrs = {
       sha256 =
         if cudaSupport then
-          "sha256-tdO4YjO985zbittb16RFWgxgUBrHYQfv5gRsA4IAkTk="
+          "sha256-KcP+FKdA0XRQ9g+rxkdGZO8J3pimwomS2dnIpXG5bCI="
         else if stdenv.isDarwin then
-          "sha256-+XYxfXBCASueqDGg0Zqcmpf7zmemYM6xCE+x0rl3j34="
+          lib.fakeSha256
+          # "sha256-+XYxfXBCASueqDGg0Zqcmpf7zmemYM6xCE+x0rl3j34="
         else
-          "sha256-La1wC8X5aGK5mXvYy/kO8n4J+zaRZEc/DAX5zaH1D5A=";
+          "sha256-yWKytltk8XQz+3+vdt9Iksc4wAMbioJmynds6BfQe/c=";
     };
 
     buildAttrs = {
