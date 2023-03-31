@@ -2,17 +2,17 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "helix";
-  version = "22.05";
+  version = "23.03";
 
   # This release tarball includes source code for the tree-sitter grammars,
   # which is not ordinarily part of the repository.
   src = fetchzip {
     url = "https://github.com/helix-editor/helix/releases/download/${version}/helix-${version}-source.tar.xz";
-    sha256 = "sha256-MVHfj9iVC8rFGFU+kpRcH0qX9kQ+scFsRgSw7suC5RU=";
+    sha256 = "sha256-FtY2V7za3WGeUaC2t2f63CcDUEg9zAS2cGUWI0YeGwk=";
     stripRoot = false;
   };
 
-  cargoSha256 = "sha256-9jkSZ2yW0Pca1ats7Mgv7HprpjoZWLpsbuwMjYOKlmk=";
+  cargoSha256 = "sha256-+KnBQA7gYLu2O/5vbY5cdEj9hni0Cn3cWPYswBi4934=";
 
   nativeBuildInputs = [ makeWrapper ];
 
